@@ -1,0 +1,28 @@
+language: go
+
+matrix:
+  fast_finish: true
+  include:
+  - go: 1.14.x
+    env: GO111MODULE=on
+
+branches:
+  only:
+    - master
+
+before_install:
+  - mkdir "${HOME}/go"
+  - export GOPATH="${HOME}/go"
+
+install:
+  - go mod download
+  - export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
+
+script:
+  - go test -race -v ./...
+  - CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -tags prod -o $GOPATH/bin/app
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
