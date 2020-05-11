@@ -2,11 +2,11 @@ package quran
 
 import "os"
 
-type datasetFile string
+type DatasetFile string
 
 const (
-	datasetQuranSimple           datasetFile = "quran-simple-min.xml"
-	datasetTranslateFaFooladvand             = "fa.fooladvand.xml"
+	DatasetQuranSimple           DatasetFile = "quran-simple-min.xml"
+	DatasetTranslateFaFooladvand             = "fa.fooladvand.xml"
 )
 
 var datasetPath string

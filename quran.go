@@ -15,11 +15,11 @@ type Quran struct {
 
 // New Quran
 func New() (Quran, error) {
-	return NewQuranByXmlFile(datasetPath + string(datasetQuranSimple))
+	return NewQuranByXmlFile(datasetPath + string(DatasetQuranSimple))
 }
 
 // NewTranslate Translate of Quran
-func NewTranslate(file datasetFile) (Quran, error) {
+func NewTranslate(file DatasetFile) (Quran, error) {
 	return NewQuranByXmlFile(datasetPath + string(file))
 }
 

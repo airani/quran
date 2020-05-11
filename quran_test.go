@@ -53,7 +53,7 @@ func TestQuran_Surah(t *testing.T) {
 }
 
 func TestQuranTranslate_Surah(t *testing.T) {
-	q, _ := NewTranslate(datasetTranslateFaFooladvand)
+	q, _ := NewTranslate(DatasetTranslateFaFooladvand)
 	type fields struct {
 		Surahs []Surah
 	}

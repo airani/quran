@@ -5,7 +5,6 @@
 Quran module for Go lang to working with Quran ayahs and surahs
 
 ### New Quran
-
 ```go
 q, err := quran.New()
 if err != nil {
@@ -32,3 +31,9 @@ s.Ayah(1) // Ayah number 1 of surah
 ```go
 s.RandAyah()
 ```
+
+### Set Dataset Path
+To config dataset path of Quran files set os env `PATH_DATASET`
+```
+PATH_DATASET="/go/quran/dataset"
+``` 
