@@ -13,13 +13,13 @@ type Quran struct {
 	Surahs []Surah `xml:"sura"`
 }
 
-// NewQuran Quran
-func NewQuran() (Quran, error) {
+// New Quran
+func New() (Quran, error) {
 	return NewQuranByXmlFile(datasetPath + string(datasetQuranSimple))
 }
 
-// NewQuranTranslate Translate of Quran
-func NewQuranTranslate(file datasetFile) (Quran, error) {
+// NewTranslate Translate of Quran
+func NewTranslate(file datasetFile) (Quran, error) {
 	return NewQuranByXmlFile(datasetPath + string(file))
 }
 

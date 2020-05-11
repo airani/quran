@@ -6,7 +6,7 @@ import (
 )
 
 func TestQuran_Surah(t *testing.T) {
-	q, _ := NewQuran()
+	q, _ := New()
 	type fields struct {
 		Surahs []Surah
 	}
@@ -53,7 +53,7 @@ func TestQuran_Surah(t *testing.T) {
 }
 
 func TestQuranTranslate_Surah(t *testing.T) {
-	q, _ := NewQuranTranslate(datasetTranslateFaFooladvand)
+	q, _ := NewTranslate(datasetTranslateFaFooladvand)
 	type fields struct {
 		Surahs []Surah
 	}
