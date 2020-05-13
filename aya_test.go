@@ -3,7 +3,7 @@ package quran
 import "testing"
 
 func TestAyah_IsSajdaObligatory(t *testing.T) {
-	q, _ := New()
+	q, _ := NewSimple()
 	s := q.Surah(32)
 	tests := []struct {
 		name string

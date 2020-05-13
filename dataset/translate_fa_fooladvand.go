@@ -1,3 +1,7 @@
+package dataset
+
+func TranslateFaFooladvand() string {
+	return `
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
 
@@ -6480,3 +6484,5 @@
 		<aya index="6" text="چه از جنّ و [چه از] انس.»"/>
 	</sura>
 </quran>
+`
+}

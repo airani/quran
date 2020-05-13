@@ -5,7 +5,10 @@ import (
 	"io/ioutil"
 	"math/rand"
 	"os"
+	"strings"
 	"time"
+
+	"github.com/airani/quran/dataset"
 )
 
 // Quran struct of xml file
@@ -13,14 +16,26 @@ type Quran struct {
 	Surahs []Surah `xml:"sura"`
 }
 
-// New Quran
-func New() (Quran, error) {
-	return NewQuranByXmlFile(datasetPath + string(DatasetQuranSimple))
+// NewSimple Quran
+func NewSimple() (Quran, error) {
+	return NewQuranByXml(dataset.Simple())
 }
 
-// NewTranslate Translate of Quran
-func NewTranslate(file DatasetFile) (Quran, error) {
-	return NewQuranByXmlFile(datasetPath + string(file))
+// NewQuranByXml read xml string of Quran and returns a Quran struct
+func NewQuranByXml(xmlStr string) (q Quran, err error) {
+	r := strings.NewReader(xmlStr)
+
+	b, err := ioutil.ReadAll(r)
+	if err != nil {
+		return
+	}
+
+	err = xml.Unmarshal(b, &q)
+	if err != nil {
+		return
+	}
+
+	return
 }
 
 // NewQuranByXmlFile read xml file of Quran and returns a Quran struct

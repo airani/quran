@@ -6,7 +6,7 @@ import (
 )
 
 func TestSurah_Ayah(t *testing.T) {
-	q, _ := New()
+	q, _ := NewSimple()
 	s := q.Surah(1)
 	type args struct {
 		n int

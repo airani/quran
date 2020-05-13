@@ -1,3 +1,7 @@
+package dataset
+
+func Simple() string {
+	return `
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
 
@@ -6497,3 +6501,5 @@
 		<aya index="6" text="مِنَ الجِنَّةِ وَالنّاسِ" />
 	</sura>
 </quran>
+`
+}
