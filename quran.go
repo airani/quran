@@ -21,6 +21,11 @@ func NewSimple() (Quran, error) {
 	return NewQuranByXml(dataset.Simple())
 }
 
+// NewSimpleClean Quran
+func NewSimpleClean() (Quran, error) {
+	return NewQuranByXml(dataset.SimpleClean())
+}
+
 // NewQuranByXml read xml string of Quran and returns a Quran struct
 func NewQuranByXml(xmlStr string) (q Quran, err error) {
 	r := strings.NewReader(xmlStr)

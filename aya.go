@@ -22,3 +22,10 @@ func (a Ayah) IsSajdaObligatory() bool {
 	}
 	return false
 }
+
+func (a Ayah) HasBismillah() bool {
+	if a.Bismillah == "" {
+		return false
+	}
+	return true
+}
